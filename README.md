@@ -10,23 +10,27 @@ Additionally you will need to have the filter.contigs.py file downloaded. To run
 Script Description
 This script performs the following steps:
 
-Runs fastQC on raw data (input fastq files)
-Runs multiQC for a summary of previously generated fastQC files
-Unzips compressed fastq files
-Trims files with Trimmomatic
-Runs fastQC on trimmed files
-Runs multiQC for a summary of previously generated fastQC on trimmed files
-Removes phiX contamination using BBMap
-Runs fastQC on trimmed files with phiX removed
-Runs multiQC for a summary of previously generated fastQC on trimmed files with phiX removed
-Assembles cleaned files using SKESA
-Filters assembled contigs using filter.contigs.py
+1. Runs fastQC on raw data (input fastq files)
+2. Runs multiQC for a summary of previously generated fastQC files
+3. Unzips compressed fastq files
+4. Trims files with Trimmomatic
+5. Runs fastQC on trimmed files
+6. Runs multiQC for a summary of previously generated fastQC on trimmed files
+7. Removes phiX contamination using BBMap
+8. Runs fastQC on trimmed files with phiX removed
+9. Runs multiQC for a summary of previously generated fastQC on trimmed files with phiX removed
+10. Assembles cleaned files using SKESA
+11. Filters assembled contigs using filter.contigs.py
+    
 Note:
 
-this script creates several directories for data organization ('unzip', 'trim_data', 'fastqc_results', 'trimmed_no_phiX', 'fastqc_noPhiX_results', 'SKESA_Assembled', and 'SKESA_Filtered')
-final results (cleaned and assembled reads in fasta format) are within the 'SKESA_filtered' folder
+1. this script creates several directories for data organization ('unzip', 'trim_data', 'fastqc_results', 'trimmed_no_phiX', 'fastqc_noPhiX_results', 'SKESA_Assembled', and 'SKESA_Filtered')
+2. final results (cleaned and assembled reads in fasta format) are within the 'SKESA_filtered' folder
+
 Instructions
-Set Directories
-Update 'inputDir' to the directory your FASTQ files are located.
-Update all tool paths are set correctly based on your system configuration.
+1. Set Directories
+2. Update 'inputDir' to the directory your FASTQ files are located.
+3. Update all tool paths are set correctly based on your system configuration.
 ('FASTQC', 'MULTIQC', 'TRIMMOMATIC', 'BBDUK_SCRIPT', 'SKESA', and 'FILTER_SCRIPT')
+
+
